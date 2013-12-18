@@ -368,5 +368,56 @@
       "NSFW" : true
     }
   }
+},
+{
+  "name" : "yande.re",
+  "data" : {
+    "url"         : "https://yande.re/post",
+    "paragraph"   : "id('post-list-posts')/li",
+    "nextLink"    : "id('paginator')/div/a[last()]",
+    "permalink"   : "./div/a",
+    "subRequest"  : {
+      "paragraph"               : "id('content')",
+      "caption"                 : "//title",
+      "imageSource"             : "concat(substring-before(id('image')/@src,'yuno.'),substring-after(id('image')/@src,'yuno.'))",
+      "imageSourceForReblog"    : "concat(substring-before(id('highres')/@href,'yuno.'),substring-after(id('highres')/@href,'yuno.'))"
+    },
+    "options"     : {
+      "needReferer" : "https://yande.re/*"
+    }
+  }
+},
+{
+  "name" : "danbooru",
+  "data" : {
+    "url"         : "http://danbooru.donmai.us/",
+    "paragraph"   : "id('posts')/article",
+    "nextLink"    : "id('posts')/div/menu/li[last()]/a",
+    "permalink"   : "./a",
+    "subRequest"  : {
+      "paragraph"               : "id('a-show')",
+      "caption"                 : "//title",
+      "imageSource"             : "id('image')",
+      "imageSourceForReblog"    : "id('sidebar')/section[h1[contains(.,'Information')]]/ul/li[contains(.,'Size:')]/a/@href"
+    },
+    "options"     : {
+      "needReferer" : "http://danbooru.donmai.us/*"
+    }
+  }
+},
+{
+  "name" : "ニコニコ静画 (イラスト) (要ログイン)",
+  "data" : {
+    "url"         : "http://seiga.nicovideo.jp/illust/list/image_created?track=seiga_new",
+    "paragraph"   : "//div[@class='illust_list']//li[contains(@class,'list_item')]",
+    "permalink"   : "concat('http://seiga.nicovideo.jp/image/source/',substring-after(./a/@href,'im'))",
+    "nextLink"    : "//li[@class='next']/a",
+    "subRequest"  : {
+      "paragraph"               : "//div[@class='illust_view_big']",
+      "permalink"               : "./img/@data-watch_url",
+      "caption"                 : "//title",
+      "imageSource"             : "concat('http://lohas.nicoseiga.jp',./img/@src)"
+    }
+  }
 }
 ]
