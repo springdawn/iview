@@ -450,6 +450,9 @@
       "paragraph"               : "//a[starts-with(@title,'画像')][img]",
       "caption"                 : "./@title",
       "imageSource"             : "concat(translate(substring(./@href,1,28),'_','/'),'.',substring(./@href,30,3))"
+    },
+    "options"     : {
+      "needReferer" : "http://futalog.com/*"
     }
   }
 }
