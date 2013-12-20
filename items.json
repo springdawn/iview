@@ -439,5 +439,18 @@
       "imageSource"             : "concat('http://lohas.nicoseiga.jp',./img/@src)"
     }
   }
+},
+{
+  "name" : "ふたろぐばこ－二次元裏may＠ふたば保管庫 ドール",
+  "data" : {
+    "url"         : "http://futalog.com/index.php?mode=ttl&s_word=%83h%81%5B%83%8B",
+    "paragraph"   : "//dl[@class='list_g']",
+    "permalink"   : "./a",
+    "subRequest"  : {
+      "paragraph"               : "//a[starts-with(@title,'画像')][img]",
+      "caption"                 : "./@title",
+      "imageSource"             : "concat(translate(substring(./@href,1,28),'_','/'),'.',substring(./@href,30,3))"
+    }
+  }
 }
 ]
