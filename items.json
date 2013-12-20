@@ -453,6 +453,7 @@
     },
     "options"     : {
       "needReferer" : "http://futalog.com/pic/*"
+      "refererUrl"  : "http://futalog.com/pic/"
     }
   }
 }
