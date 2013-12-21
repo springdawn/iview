@@ -479,7 +479,7 @@
     "permalink"   : "./a",
     "subRequest"  : {
       "paragraph"               : "id('master')|//form[2]/table//td[a[img]]",
-      "caption"                 : "id('master')/font[1]//text()",
+      "caption"                 : "string(id('master')/font[1]/.)",
       "imageSource"             : "./a[img]/@href"
     }
   }
@@ -492,7 +492,7 @@
     "permalink"   : "./a",
     "subRequest"  : {
       "paragraph"               : "id('master')|//form[2]/table//td[a[img]]",
-      "caption"                 : "concat(id('master')/font[1]/text(),' ',id('master')/font[2]/text(),' ',id('master')/blockquote//text())",
+      "caption"                 : "concat(string(id('master')/font[1]/.),' ',string(id('master')/font[2]/.),' ',string(id('master')/blockquote/.))",
       "imageSource"             : "./a[img]/@href"
     }
   }
