@@ -469,5 +469,19 @@
       "imageSource"             : "."
     }
   }
+},
+{
+  "name" : "[drawr] 最新の投稿",
+  "data" : {
+    "url"         : "http://drawr.net/new.php",
+    "paragraph"   : "//div[@class='drawr_box']",
+    "permalink"   : ".//td/a",
+    "nextLink"    : "//p[@class='left-food-link'][contains(.,'Older')]/a",
+    "subRequest"  : {
+      "paragraph"               : "//div[@class='permalinkEntry']",
+      "caption"                 : "//title",
+      "imageSource"             : ".//a[@name='draws']/img"
+    }
+  }
 }
 ]
