@@ -479,7 +479,7 @@
     "permalink"   : "./a",
     "subRequest"  : {
       "paragraph"               : "//form[2]|//form[2]/table//td[a[img]]",
-      "caption"                 : ".//font[1]",
+      "caption"                 : "//form[2]//font[1]",
       "imageSource"             : "./a[img]/@href"
     }
   }
@@ -492,7 +492,7 @@
     "permalink"   : "./a",
     "subRequest"  : {
       "paragraph"               : "//form[2]|//form[2]/table//td[a[img]]",
-      "caption"                 : "concat(string(.//font[1]/.),' ',string(.//font[2]/.),' ',string(.//blockquote/.))",
+      "caption"                 : "concat(string(//form[2]//font[1]/.),' ',string(//form[2]//font[2]/.),' ',string(//form[2]//blockquote/.))",
       "imageSource"             : "./a[img]/@href"
     }
   }
