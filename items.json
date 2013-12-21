@@ -479,7 +479,7 @@
     "permalink"   : "./a",
     "subRequest"  : {
       "paragraph"               : "id('master')|//form[2]/table//td[a[img]]",
-      "caption"                 : "//form[@class='window']",
+      "caption"                 : "//form[2]//small[1]",
       "imageSource"             : "./a[img]/@href"
     }
   }
