@@ -400,7 +400,9 @@
       "permalink"               : "//link[@rel='canonical']/@href",
       "caption"                 : "//title",
       "imageSource"             : "concat(substring-before(id('image')/@src,'yuno.'),substring-after(id('image')/@src,'yuno.'))",
-      "imageSourceForReblog"    : "concat(substring-before(id('highres')/@href,'yuno.'),substring-after(id('highres')/@href,'yuno.'))"
+      "imageSource"             : "id('image'),
+      "imageSourceForReblog"    : "concat(substring-before(id('highres')/@href,'yuno.'),substring-after(id('highres')/@href,'yuno.'))",
+      "imageSourceForReblog"    : "id('highres')/@href"
     },
     "options"     : {
       "needReferer" : "https://yande.re/*"
