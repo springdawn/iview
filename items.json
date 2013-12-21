@@ -449,6 +449,7 @@
     "subRequest"  : {
       "paragraph"               : "//a[starts-with(@title,'画像')][img]",
       "caption"                 : "./@title",
+      "permalink"               : ".",
       "imageSource"             : "concat(translate(substring(./@href,0,string-length(./@href)-19),'_','/'),'.',substring(./@href,string-length(./@href)-18,3))"
     },
     "options"     : {
