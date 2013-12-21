@@ -467,11 +467,7 @@
       "paragraph"               : "//a[@href=.][contains(.,'.jpg') or contains(.,'.gif') or contains(.,'.png')]",
       "caption"                 : "//title",
       "imageSource"             : "."
-    }/*,
-    "options"     : {
-      "needReferer" : "http://futalog.com/pic/*",
-      "refererUrl"  : "http://futalog.com/pic/"
-    }*/
+    }
   }
 }
 ]
