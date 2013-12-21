@@ -456,5 +456,22 @@
       "refererUrl"  : "http://futalog.com/pic/"
     }
   }
+},
+{
+  "name" : "二次元裏＠ふたば(may)ドルスレ フルミラーサイト (突発)",
+  "data" : {
+    "url"         : "http://may.nijiura-doll.info/fullmirror/latest/?C=M;O=D",
+    "paragraph"   : "//table",
+    "permalink"   : "//td/a[starts-with(.,'may_')]",
+    "subRequest"  : {
+      "paragraph"               : "//a[@href=.][contains(.,'.jpg') or contains(.,'.gif') or contains(.,'.png')]",
+      "caption"                 : "//title",
+      "imageSource"             : "."
+    }/*,
+    "options"     : {
+      "needReferer" : "http://futalog.com/pic/*",
+      "refererUrl"  : "http://futalog.com/pic/"
+    }*/
+  }
 }
 ]
