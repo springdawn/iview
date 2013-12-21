@@ -480,7 +480,7 @@
     "subRequest"  : {
       "paragraph"               : "id('master')|//form[2]/table//td[a[img]]",
       "caption"                 : "//title",
-      "imageSource"             : "./a/@href"
+      "imageSource"             : "./a[img]/@href"
     }
   }
 },
