@@ -370,10 +370,28 @@
   }
 },
 {
+  "name" : "[pixiv] 総合デイリーランキング",
+  "data" : {
+    "url"         : "http://www.pixiv.net/ranking.php?mode=daily",
+    "paragraph"   : "//li[@class='image-item']",
+    "nextLink"    : "concat(//link[@rel='canonical']/@href,substring(concat('&p=',substring-after(//link[@rel='canonical']/@href,'p=')+1),0,boolean(//a[@class='column-info'])*5))",
+    "permalink"   : ".//a[@class='work']",
+    "subRequest"  : {
+      "paragraph"            : "//div[@class='works_display']",
+      "caption"              : "//title",
+      "imageSource"          : "./a/img",
+      "imageSourceForReblog" : "concat(substring-before(./a/img/@src,'_m.'),'.',substring-after(./a/img/@src,'_m.'))"
+    },
+    "options"     : {
+      "needReferer" : "http://*.pixiv.net/img*"
+    }
+  }
+},
+{
   "name" : "[pixiv] みんなのR-18新着イラスト",
   "data" : {
     "url"         : "http://www.pixiv.net/new_illust_r18.php",
-    "paragraph"   : "//li[@class='image-item']",
+    "paragraph"   : "//*[@class='ranking-item']",
     "nextLink"    : "//a[@rel='next']",
     "permalink"   : ".//a[@class='work']",
     "subRequest"  : {
