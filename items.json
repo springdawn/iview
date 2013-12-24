@@ -373,7 +373,7 @@
   "name" : "[pixiv] 総合デイリーランキング",
   "data" : {
     "url"         : "http://www.pixiv.net/ranking.php?mode=daily",
-    "paragraph"   : "//li[@class='image-item']",
+    "paragraph"   : "//*[@class='image-item']",
     "nextLink"    : "concat(//link[@rel='canonical']/@href,substring(concat('&p=',substring-after(//link[@rel='canonical']/@href,'p=')+1),0,boolean(//a[@class='column-info'])*5))",
     "permalink"   : ".//a[@class='work']",
     "subRequest"  : {
@@ -391,7 +391,7 @@
   "name" : "[pixiv] みんなのR-18新着イラスト",
   "data" : {
     "url"         : "http://www.pixiv.net/new_illust_r18.php",
-    "paragraph"   : "//*[@class='ranking-item']",
+    "paragraph"   : "//li[@class='ranking-item']",
     "nextLink"    : "//a[@rel='next']",
     "permalink"   : ".//a[@class='work']",
     "subRequest"  : {
