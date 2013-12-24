@@ -370,6 +370,25 @@
   }
 },
 {
+  "name" : "[pixiv] みんなのR-18新着イラスト",
+  "data" : {
+    "url"         : "http://www.pixiv.net/new_illust_r18.php",
+    "paragraph"   : "//li[@class='image-item']",
+    "nextLink"    : "//a[@rel='next']",
+    "permalink"   : ".//a[@class='work']",
+    "subRequest"  : {
+      "paragraph"            : "//div[@class='works_display']",
+      "caption"              : "//title",
+      "imageSource"          : "./a/img",
+      "imageSourceForReblog" : "concat(substring-before(./a/img/@src,'_m.'),substring('_p0',1,number(contains(./a/@href,'manga'))*3),'.',substring-after(./a/img/@src,'_m.'))"
+    },
+    "options"     : {
+      "needReferer" : "http://*.pixiv.net/img*",
+      "NSFW"        : true
+    }
+  }
+},
+{
   "name" : "[pixiv] 総合デイリーランキング",
   "data" : {
     "url"         : "http://www.pixiv.net/ranking.php?mode=daily",
@@ -388,11 +407,11 @@
   }
 },
 {
-  "name" : "[pixiv] みんなのR-18新着イラスト",
+  "name" : "[pixiv] 総合R-18 デイリーランキング",
   "data" : {
-    "url"         : "http://www.pixiv.net/new_illust_r18.php",
-    "paragraph"   : "//li[@class='image-item']",
-    "nextLink"    : "//a[@rel='next']",
+    "url"         : "http://www.pixiv.net/ranking.php?mode=daily_r18",
+    "paragraph"   : "//*[@class='ranking-item']",
+    "nextLink"    : "concat(//link[@rel='canonical']/@href,'&p=',concat(substring(substring-after(//link[@rel='canonical']/@href,'p=')+1,1,boolean(//a[@class='column-info'])*2),substring('2',1,not(//a[@class='column-info'])*1)))",
     "permalink"   : ".//a[@class='work']",
     "subRequest"  : {
       "paragraph"            : "//div[@class='works_display']",
@@ -401,8 +420,7 @@
       "imageSourceForReblog" : "concat(substring-before(./a/img/@src,'_m.'),substring('_p0',1,number(contains(./a/@href,'manga'))*3),'.',substring-after(./a/img/@src,'_m.'))"
     },
     "options"     : {
-      "needReferer" : "http://*.pixiv.net/img*",
-      "NSFW"        : true
+      "needReferer" : "http://*.pixiv.net/img*"
     }
   }
 },
