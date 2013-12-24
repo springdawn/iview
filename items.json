@@ -380,7 +380,7 @@
       "paragraph"            : "//div[@class='works_display']",
       "caption"              : "//title",
       "imageSource"          : "./a/img",
-      "imageSourceForReblog" : "concat(substring-before(./a/img/@src,'_m.'),'.',substring-after(./a/img/@src,'_m.'))"
+      "imageSourceForReblog" : "concat(substring-before(./a/img/@src,'_m.'),substring('_p0',1,number(contains(./a/@href,'manga'))*3),'.',substring-after(./a/img/@src,'_m.'))"
     },
     "options"     : {
       "needReferer" : "http://*.pixiv.net/img*"
