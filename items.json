@@ -411,7 +411,7 @@
   "data" : {
     "url"         : "http://www.pixiv.net/ranking.php?mode=daily_r18",
     "paragraph"   : "//*[@class='ranking-item']",
-    "nextLink"    : "concat(//link[@rel='canonical']/@href,'&p=',concat(substring(substring-after(//link[@rel='canonical']/@href,'p=')+1,1,boolean(//a[@class='column-info'])*2),substring('2',1,not(//a[@class='column-info'])*1)))",
+    "nextLink"    : "concat(substring-before(//link[@rel='canonical']/@href,'&date'),'_r18',substring-after(//link[@rel='canonical']/@href,'daily'),'&p=',concat(substring(substring-after(//link[@rel='canonical']/@href,'p=')+1,1,boolean(//a[@class='column-info'])*2),substring('2',1,not(//a[@class='column-info'])*1)))",
     "permalink"   : ".//a[@class='work']",
     "subRequest"  : {
       "paragraph"            : "//div[@class='works_display']",
